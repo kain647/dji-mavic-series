@@ -92,8 +92,55 @@ export const More = styled.div`
     :hover {
       color: #616466;
     }
-		svg {
-			margin-left: 10px;
-		}
+    svg {
+      margin-left: 10px;
+    }
   }
+`;
+export const PlatinumContainer = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  //padding: 30px;
+  background-color: #fff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  :last-child {
+    margin-right: 0;
+  }
+  :hover {
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+  }
+`;
+export const PhotoPlatinum = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  img {
+    box-sizing: border-box;
+    width: 590px;
+    height: 320px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+`;
+export const PlatinumMap = styled.div`
+  display: flex;
+  box-sizing: border-box;
+`;
+export const InfoPlatinum = styled.div`
+  display: flex;
+  width: 590px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+`;
+export const TitlePlatinum = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+export const SubtitlePlatinum = styled.div`
+  display: flex;
+  margin-bottom: 20px;
 `;
