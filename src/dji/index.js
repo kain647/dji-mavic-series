@@ -10,6 +10,12 @@ import {
   Buttons,
   Buy,
   More,
+  PlatinumContainer,
+  PhotoPlatinum,
+  PlatinumMap,
+  InfoPlatinum,
+  TitlePlatinum,
+  SubtitlePlatinum,
 } from "./styled";
 
 const drones = [
@@ -194,13 +200,72 @@ const drones = [
   },
 ];
 
+const mavic = [
+  {
+    titlePlatinum: <img src={`images/mavicProPlatinumLogo.svg`} />,
+    subtitlePlatinum:
+      "30-minute Max Flight Time | 4 dB Noise Reduction | 4k Camera | 12 MP Photos",
+    photoPlatinum: <img src={`images/mavicProPlatinum.jpg`} />,
+    morePlatinum: (
+      <More>
+        <a
+          target=""
+          href="https://www.dji.com/mavic-pro-platinum?site=brandsite&from=landing_page"
+        >
+          Learn More
+          <FaAngleRight />
+        </a>
+      </More>
+    ),
+  },
+  {
+    titlePlatinum: <img src={`images/mavicProLogo.svg`} />,
+    subtitlePlatinum:
+      "4K Camera | 12 MP Photos | 7 km Range | 65 kph Max Speed",
+    photoPlatinum: <img src={`images/mavicOnePro.jpg`} />,
+    morePlatinum: (
+      <More>
+        <a
+          target=""
+          href="https://www.dji.com/mavic?site=brandsite&from=landing_page"
+        >
+          Learn More
+          <FaAngleRight />
+        </a>
+      </More>
+    ),
+  },
+];
+
 const Dji = (props) => {
   return (
     <Container>
       {drones.map((mavic) => {
         return <Mavic {...mavic} />;
       })}
+      <PlatinumMap>
+        {mavic.map((platinum) => {
+          return <Platinum {...platinum} />;
+        })}
+      </PlatinumMap>
     </Container>
+  );
+};
+
+const Platinum = (props) => {
+  const { titlePlatinum, subtitlePlatinum, photoPlatinum, morePlatinum } =
+    props;
+  return (
+    <PlatinumContainer>
+      <PhotoPlatinum>{photoPlatinum}</PhotoPlatinum>
+      <InfoPlatinum>
+        <TitlePlatinum>{titlePlatinum}</TitlePlatinum>
+        <SubtitlePlatinum>{subtitlePlatinum}</SubtitlePlatinum>
+        <Buttons>
+          <More>{morePlatinum}</More>
+        </Buttons>
+      </InfoPlatinum>
+    </PlatinumContainer>
   );
 };
 
@@ -212,8 +277,8 @@ const Mavic = (props) => {
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
         <Buttons>
-          <buy>{buy}</buy>
-          <more>{more}</more>
+          <Buy>{buy}</Buy>
+          <More>{more}</More>
         </Buttons>
       </Detail>
       <PhotoMavic>{photo}</PhotoMavic>
