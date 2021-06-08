@@ -1,8 +1,14 @@
 import styled from "styled-components";
+import {Route} from "react-router-dom";
+import Dji from "./index";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+`;
+export const MavicMap = styled.div`
+	display: flex;
+	flex-direction: column;
 `;
 export const MavicBox = styled.div`
   display: flex;
@@ -31,11 +37,10 @@ export const Title = styled.div`
 export const Subtitle = styled.div`
   display: flex;
   width: 472px;
-  height: 72px;
   color: #303233;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 `;
 export const PhotoMavic = styled.div`
   display: flex;
@@ -44,7 +49,8 @@ export const PhotoMavic = styled.div`
     box-sizing: border-box;
     width: 1200px;
     height: 480px;
-    margin-bottom: 20px;
+		margin-top: 20px;
+    //margin-bottom: 20px;
     cursor: pointer;
     :hover {
       box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
@@ -101,7 +107,7 @@ export const PlatinumContainer = styled.div`
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  //padding: 30px;
+	margin-top: 20px;
   background-color: #fff;
   margin-right: 20px;
   margin-bottom: 20px;

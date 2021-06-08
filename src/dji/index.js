@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa";
 import {
   Container,
@@ -16,6 +17,7 @@ import {
   InfoPlatinum,
   TitlePlatinum,
   SubtitlePlatinum,
+  MavicMap,
 } from "./styled";
 
 const drones = [
@@ -36,13 +38,10 @@ const drones = [
     ),
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/air-2s?site=brandsite&from=landing_page"
-        >
+        <Link to={"/air-2s"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -63,13 +62,10 @@ const drones = [
     ),
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mini-2?site=brandsite&from=landing_page"
-        >
+        <Link to={"/mini-2"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -90,13 +86,10 @@ const drones = [
     ),
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic-air-2?site=brandsite&from=landing_page"
-        >
+        <Link to={"/air-2"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -117,13 +110,10 @@ const drones = [
     ),
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic-mini?site=brandsite&from=landing_page"
-        >
+        <Link to={"/mini"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -144,13 +134,10 @@ const drones = [
     ),
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic-2?site=brandsite&from=landing_page#pro"
-        >
+        <Link to={"/mavic-2"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -171,13 +158,10 @@ const drones = [
     ),
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic-2?site=brandsite&from=landing_page#zoom"
-        >
+        <Link to={"/mavic-2"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -188,19 +172,16 @@ const drones = [
     photo: <img src={`images/mavicAir.jpg`} />,
     more: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic-air?site=brandsite&from=landing_page"
-        >
+        <Link to={"/mavic-air"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
 ];
 
-const mavic = [
+const mavicOld = [
   {
     titlePlatinum: <img src={`images/mavicProPlatinumLogo.svg`} />,
     subtitlePlatinum:
@@ -208,13 +189,10 @@ const mavic = [
     photoPlatinum: <img src={`images/mavicProPlatinum.jpg`} />,
     morePlatinum: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic-pro-platinum?site=brandsite&from=landing_page"
-        >
+        <Link to={"/mavic-pro-platinum"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -225,13 +203,10 @@ const mavic = [
     photoPlatinum: <img src={`images/mavicOnePro.jpg`} />,
     morePlatinum: (
       <More>
-        <a
-          target=""
-          href="https://www.dji.com/mavic?site=brandsite&from=landing_page"
-        >
+        <Link to={"/mavic-pro"}>
           Learn More
           <FaAngleRight />
-        </a>
+        </Link>
       </More>
     ),
   },
@@ -239,16 +214,18 @@ const mavic = [
 
 const Dji = (props) => {
   return (
-    <Container>
-      {drones.map((mavic) => {
-        return <Mavic {...mavic} />;
-      })}
-      <PlatinumMap>
-        {mavic.map((platinum) => {
-          return <Platinum {...platinum} />;
-        })}
-      </PlatinumMap>
-    </Container>
+      <Container>
+        <MavicMap>
+          {drones.map((mavic) => {
+            return <Mavic {...mavic} />;
+          })}
+        </MavicMap>
+        <PlatinumMap>
+          {mavicOld.map((platinum) => {
+            return <Platinum {...platinum} />;
+          })}
+        </PlatinumMap>
+      </Container>
   );
 };
 
