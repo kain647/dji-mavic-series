@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header } from "./styled";
+import { Container, Header, SettingsBox } from "./styled";
 
 const AirSettings = () => {
   return (
@@ -286,14 +286,10 @@ const AirSettings = () => {
             </div>
           </li>
         </ul>
-        <ul className="detailed-parameter-list">
-          <li className="detailed-parameter">
-            <div className="detailed-parameter-value">
-              <img src={`images/settings.jpg`} />
-            </div>
-          </li>
-        </ul>
       </div>
+      <SettingsBox>
+        <img src={`images/settings.jpg`} />
+      </SettingsBox>
     </Container>
   );
 };
