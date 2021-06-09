@@ -22,7 +22,7 @@ export const Container = styled.div`
     display: flex;
     padding: 12px 16px;
     background: #f8f9fb;
-    align-items: baseline;
+    align-items: center;
     margin: 0;
     :nth-child(2n-1) {
       background: #fff;
@@ -32,18 +32,13 @@ export const Container = styled.div`
   .detailed-parameter-key {
     //width: 350px;
   }
-	.detailed-parameter-value {
-		display: flex;
-		margin-left: 20px;
-    img {
-      box-sizing: border-box;
-      width: auto;
-      height: 100%;
-    }
-	}
+  .detailed-parameter-value {
+    display: flex;
+    margin-left: 20px;
+  }
 `;
 export const Header = styled.h1`
-	display: flex;
+  display: flex;
 `;
 export const SpecsTitle = styled.div`
   display: flex;
@@ -73,4 +68,14 @@ export const ListTitle = styled.h3`
   line-height: 32px;
   margin-bottom: 32px;
 `;
-
+export const SettingsBox = styled.div`
+  display: flex;
+	justify-content: center;
+  img {
+    display: flex;
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    margin-top: 20px;
+  }
+`;
