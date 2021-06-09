@@ -17,6 +17,7 @@ import MavicProZoom from "./dji/Mavic2Pro&Mavic2Zoom";
 import MavicAir from "./dji/mavicAir";
 import Platinum from "./dji/platinum";
 import Pro from "./dji/pro";
+import AirSettings from "./dji/mavic-air-settings";
 
 const MainContent = styled.div`
   display: flex;
@@ -95,6 +96,13 @@ ReactDOM.render(
             exact
             component={() => {
               return <Pro />;
+            }}
+          />
+          <Route
+            path={"/mavic-air/settings"}
+            exact
+            component={() => {
+              return <AirSettings />;
             }}
           />
         </Switch>
