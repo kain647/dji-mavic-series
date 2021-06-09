@@ -70,7 +70,7 @@ export const ListTitle = styled.h3`
 `;
 export const SettingsBox = styled.div`
   display: flex;
-	justify-content: center;
+	//justify-content: center;
   img {
     display: flex;
     box-sizing: border-box;
