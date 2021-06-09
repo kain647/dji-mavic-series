@@ -30,17 +30,16 @@ export const Container = styled.div`
     }
   }
   .detailed-parameter-key {
-    width: 255px;
+    //width: 255px;
+  }
+  .detailed-parameter-value {
+    margin-left: 20px;
   }
 `;
 export const SpecsTitle = styled.div`
   display: flex;
-  font-size: 32px;
-  line-height: 48px;
-  font-weight: 700;
   align-items: center;
-  color: #3b3e40;
-  padding-bottom: 12px;
+	justify-content: space-between;
   border-bottom: 1px solid #f0f1f2;
 `;
 export const SpecsContainer = styled.div`
@@ -60,4 +59,13 @@ export const ListTitle = styled.h3`
   color: #3b3e40;
   line-height: 32px;
   margin-bottom: 32px;
+`;
+export const TitleSpec = styled.div`
+	display: flex;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 700;
+  align-items: center;
+  color: #3b3e40;
+  padding-bottom: 12px;
 `;
