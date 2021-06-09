@@ -33,7 +33,13 @@ export const Container = styled.div`
     //width: 350px;
   }
 	.detailed-parameter-value {
+		display: flex;
 		margin-left: 20px;
+    img {
+      box-sizing: border-box;
+      width: auto;
+      height: 100%;
+    }
 	}
 `;
 export const Header = styled.h1`
