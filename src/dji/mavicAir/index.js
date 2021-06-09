@@ -3,14 +3,25 @@ import {
   Container,
   Title,
   SpecsTitle,
-  ListTitle,
+  TitleSpec,
   SpecsContainer,
 } from "./styled";
+import { Link } from "react-router-dom";
+import { FaAngleRight } from "react-icons/fa";
+import { More } from "../styled";
 
 const MavicAir = () => {
   return (
     <Container>
-      <SpecsTitle>Specs</SpecsTitle>
+      <SpecsTitle>
+        <TitleSpec>Specs</TitleSpec>
+        <More>
+          <Link to={"/mavic-air/settings"}>
+            Mavic Air settings
+            <FaAngleRight />
+          </Link>
+        </More>
+      </SpecsTitle>
       <SpecsContainer>
         <Title>Mavic Air</Title>
         <div className="specs-parameter-wrap">
