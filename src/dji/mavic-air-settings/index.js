@@ -258,6 +258,41 @@ const AirSettings = () => {
             </div>
           </li>
         </ul>
+        <ul className="detailed-parameter-list">
+          <li className="detailed-parameter-key">
+            <h4>
+              mode_sport_cfg_tilt_atti_range|g_config_mode_sport_cfg_tilt_atti_range
+            </h4>
+          </li>
+          <li className="detailed-parameter">
+            <div className="detailed-parameter-value">
+              Угол атаки стандарт
+              <br />
+              : 35 = 68,4 км / ч
+              <br />: 26 = 50/51 км / ч
+            </div>
+          </li>
+        </ul>
+        <ul className="detailed-parameter-list">
+          <li className="detailed-parameter-key">
+            <h4>g_config_mode_normal_cfg_tilt_atti_range</h4>
+          </li>
+          <li className="detailed-parameter">
+            <div className="detailed-parameter-value">
+              Угол атаки стандарт
+              <br />
+              : 35
+              <br />: 13 = 25/26/27 км / ч
+            </div>
+          </li>
+        </ul>
+        <ul className="detailed-parameter-list">
+          <li className="detailed-parameter">
+            <div className="detailed-parameter-value">
+              <img src={`images/settings.jpg`} />
+            </div>
+          </li>
+        </ul>
       </div>
     </Container>
   );
